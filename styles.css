@@ -1,108 +1,9 @@
-/* body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #111;
-  color: #fff;
-}
-
-.hero {
-  background: url('https://via.placeholder.com/1600x600?text=Gio+Global+LLC') center/cover no-repeat;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 3em;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 1.2em;
-  color: #ccc;
-}
-
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 40px 60px;
-  background-color: #1a1a1a;
-}
-
-.section {
-  flex: 1 1 45%;
-  margin-bottom: 40px;
-}
-
-.section h2 {
-  font-size: 1.8em;
-  border-bottom: 2px solid #444;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-
-.profile {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.profile img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.icons {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.icon-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.icon-item img {
-  width: 24px;
-  height: 24px;
-}
-
-.contact {
-  text-align: center;
-  padding: 20px;
-  background-color: #000;
-  font-size: 0.95em;
-  color: #aaa;
-}
-
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .section {
-    flex: 1 1 100%;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-} */
-
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0d1b2a;
   color: #e0e1dd;
+  line-height: 1.6;
 }
 
 .hero {
@@ -143,8 +44,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 40px 60px;
+  padding: 60px;
   background-color: #1b263b;
+  gap: 40px;
 }
 
 .section {
@@ -153,25 +55,55 @@ body {
 }
 
 .section h2 {
-  font-size: 1.8em;
+  font-size: 2em;
+  color: #e0e1dd;
+  font-weight: 600;
   border-bottom: 2px solid #415a77;
   padding-bottom: 10px;
-  margin-bottom: 20px;
-  color: #e0e1dd;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: fadeInTitle 1s ease-out 0.3s forwards;
+}
+
+@keyframes fadeInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .profile {
   display: flex;
   align-items: center;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .profile img {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #778da9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.profile div {
+  color: #e0e1dd;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.section p {
+  color: #dce1e9;
+  font-size: 1em;
+  margin-bottom: 16px;
 }
 
 .icons {
@@ -185,26 +117,28 @@ body {
   align-items: center;
   gap: 10px;
   color: #e0e1dd;
+  font-size: 1em;
+  font-weight: 400;
 }
 
 .icon-item img {
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   filter: brightness(0) invert(1);
 }
 
 .contact {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background-color: #0d1b2a;
-  font-size: 0.95em;
+  font-size: 1em;
   color: #a3bcd6;
 }
 
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
-    padding: 20px;
+    padding: 30px;
   }
 
   .section {
@@ -213,6 +147,11 @@ body {
 
   .hero h1 {
     font-size: 2em;
+  }
+
+  .section .social-row a img {
+    width: 32px !important;
+    height: 32px !important;
   }
 }
 
@@ -227,6 +166,8 @@ body {
 
 .section .social-row a img {
   transition: transform 0.3s ease, filter 0.3s ease;
+  width: 48px;
+  height: 48px;
 }
 
 .section .social-row a:hover img {
