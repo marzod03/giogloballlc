@@ -135,7 +135,6 @@ body {
   color: #a3bcd6;
 }
 
-/* Responsive (mobile/tablet) */
 @media (max-width: 768px) {
   .profile {
     flex-direction: column;
@@ -151,6 +150,22 @@ body {
     margin-bottom: 20px;
   }
 
+  .section h2 {
+    font-size: 1.2em;
+  }
+  .profile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile img {
+    margin-bottom: 10px;
+  }
+
+  .profile div {
+    margin-bottom: 20px;
+  }
   .content {
     flex-direction: column;
     padding: 30px;
