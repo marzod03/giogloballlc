@@ -134,7 +134,8 @@ header p {
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: var(--bg-section);
   border: 3px solid var(--border-color);
   box-shadow: var(--accent-glow);
 }
