@@ -78,8 +78,11 @@
   </div>
 
   <footer>
-    <p>&copy; 2025 Gio Global LLC. All rights reserved.</p>
+    <p>&copy; <span id="current-year"></span> Gio Global LLC. All rights reserved.</p>
      <!-- <p><a href='/PrivacyTerms.html#privacy' style="color:inherit; text-decoration:underline;">Privacy Policy</a> · <a href='PrivacyTerms.html#terms' style="color:inherit; text-decoration:underline;">Terms of Use</a></p> -->
   </footer>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
